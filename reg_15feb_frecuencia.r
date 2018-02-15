@@ -1,3 +1,4 @@
+
 Pacientes <- read.table("C:/Users/portatil 25/Documents/frecuencia.txt", header=T)
 frecuencia<- Pacientes$Frecuencia
 peso <- Pacientes$Peso
@@ -18,7 +19,8 @@ n <- length(frecuencia)
 LI <- coef(fit)-qt(1-alpha/2,n-2)*sqrt(diag(vcov(fit)))
 LS <- coef(fit)+qt(1-alpha/2,n-2)*sqrt(diag(vcov(fit)))
 cbind(LI, LS)
-# con un 95% de confianza podemos afirmar que, por cada kg adicional en el peso corporal la frecuencia cardiaca en reposo promedio está entre 0.71 y 0.81 latidos
+# con un 95% de confianza podemos afirmar que, por cada kg adicional en el peso corporal la frecuencia cardiaca en reposo promedio
+# está entre 0.71 y 0.81 latidos
 ##############################################################################
 # pregunta D: mirar la significancia de \beta_{2}
 # H0: \beta_{2}= 0 vs H1: \beta_{2} != 0 \alpha=0.05
@@ -42,7 +44,8 @@ LS<- mu + qt(1-alpha/2, n-2)*sqrt(var)
 names(LI)
 names(LS)
 cbind(LI, LS)
-# con un 90% de confianza podemos afirmar que, la persona con 70 kgs de peso tienen en promedio una frecuencia cardiaca en reposo entre 120.82 y 122.48 latidos.
+# con un 90% de confianza podemos afirmar que, la persona con 70 kgs de peso tienen en promedio una frecuencia cardiaca en reposo 
+# entre 120.82 y 122.48 latidos.
 ##############################################################################
 # pregunta G:
 alpha<-0.01
