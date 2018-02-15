@@ -3,7 +3,7 @@ frecuencia<- Pacientes$Frecuencia
 peso <- Pacientes$Peso
 pacientes <- data.frame(frecuencia, peso)
 pacientes
-####################
+##############################################################################
 fit<-lm(frecuencia ~ 1 + peso, data=pacientes)
 summary(fit)
 # con una persona con 0 kg, los latidos en reposo promedio sería de 68.24 ñatidos
@@ -19,18 +19,18 @@ LI <- coef(fit)-qt(1-alpha/2,n-2)*sqrt(diag(vcov(fit)))
 LS <- coef(fit)+qt(1-alpha/2,n-2)*sqrt(diag(vcov(fit)))
 cbind(LI, LS)
 # con un 95% de confianza podemos afirmar que, por cada kg adicional en el peso corporal la frecuencia cardiaca en reposo promedio está entre 0.71 y 0.81 latidos
-##################
+##############################################################################
 # pregunta D: mirar la significancia de \beta_{2}
 # H0: \beta_{2}= 0 vs H1: \beta_{2} != 0 \alpha=0.05
 # \gamma: Rechazar H0 a un nivel de significancia 10*\alpha%
 # abs(T)>t_{1-\alpha/2}(n-2) = t_{0.975}(97)=1.9847
-#################
+##############################################################################
 # pregunta E: prueba de hipótesis
 # T>t_{1-\alpha}(n-2)=1.667
 qt(0.95, 97)
 # T= \betae_{2}-\beta_{2}/sqrt(vare(\beta_{2}))=2.4
  0.7629496-0.7/sqrt(vcov(fit)[2,2])
-################
+##############################################################################
 # pregunta F: intervalo para la media
 alpha<- 0.1
 n
@@ -43,7 +43,7 @@ names(LI)
 names(LS)
 cbind(LI, LS)
 # con un 90% de confianza podemos afirmar que, la persona con 70 kgs de peso tienen en promedio una frecuencia cardiaca en reposo entre 120.82 y 122.48 latidos.
-###############
+##############################################################################
 # pregunta G:
 alpha<-0.01
 x<-85
