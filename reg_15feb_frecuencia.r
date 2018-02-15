@@ -1,4 +1,3 @@
-
 Pacientes <- read.table("C:/Users/portatil 25/Documents/frecuencia.txt", header=T)
 frecuencia<- Pacientes$Frecuencia
 peso <- Pacientes$Peso
