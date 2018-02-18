@@ -1,4 +1,5 @@
-Pacientes <- read.table("C:/Users/portatil 25/Documents/frecuencia.txt", header=T)
+#Pacientes <- read.table("C:/Users/portatil 25/Documents/frecuencia.txt", header=T)
+Pacientes <- read.table("C:\\Users\\FAMILIA MORENO\\Documents\\R\\FMwd\\frecuencia.txt", header=T)
 frecuencia<- Pacientes$Frecuencia
 peso <- Pacientes$Peso
 pacientes <- data.frame(frecuencia, peso)
@@ -6,10 +7,10 @@ pacientes
 ##############################################################################
 fit<-lm(frecuencia ~ 1 + peso, data=pacientes)
 summary(fit)
-# con una persona con 0 kg, los latidos en reposo promedio sería de 68.24 ñatidos
-# \beta_{2} por cada kg adicional en el peso corporal ,la frecuencia promedio de reposo va aumentar o.76 latidos
+# con una persona con 0 kg, los latidos en reposo promedio sería de 68.24 latidos
+# \beta_{2} por cada kg adicional en el peso corporal ,la frecuencia promedio de reposo va aumentar 0.76 latidos
 # p-valor es muy pequeño
-# entre más pequeño bel \sigma el modelo tiene menor variabilidad, y da a entender la distancia de un individuo y el promedio.
+# entre más pequeño el \sigma el modelo tiene menor variabilidad, y da a entender la distancia entre la obs de un individuo y el promedio.
 # parametro de localización \beta_{1} y \beta{2}
 # formula intervalo de confianza: $\beta_{1}+/- t_{\alpha/2}$
 alpha<- 0.05
